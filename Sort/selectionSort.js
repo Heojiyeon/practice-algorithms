@@ -1,13 +1,14 @@
 function selectionSort(arr) {
     for (i = 0; i < arr.length; i++) {
-        let minNum = arr[i];
-        for (j = i; j < arr.length; j++) {
-            if (minNum > arr[j]) minNum = arr[j];
+        let minNum = i;
+        for (j = i + 1; j < arr.length; j++) {
+            if (arr[minNum] > arr[j]) minNum = j;
         }
-        let minIdx = arr.findIndex((e) => e == minNum);
-        let tmp = arr[minIdx];
-        arr[minIdx] = arr[i];
-        arr[i] = tmp;
+        if (i != j) {
+            let tmp = arr[minNum];
+            arr[minNum] = arr[i];
+            arr[i] = tmp;
+        }
     }
     return arr;
 }
