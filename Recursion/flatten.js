@@ -1,7 +1,7 @@
 function flatten(arr) {
   let result = [];
   arr.forEach((curr) => {
-    if (Array.isArray(curr)) {
+    if (!(curr * 1)) {
       result = result.concat(flatten(curr))
     } else {
       result.push(curr)

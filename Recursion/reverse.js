@@ -6,6 +6,6 @@ function reverse(words) {
     n++;
     return result = currWord + reverse(words.slice(0, words.length - n));
 }
-
-console.log(reverse('awesome')); // 'emosewa'
-console.log(reverse('rithmschool')); // 'loohcsmhtir'
+console.time(reverse('heojiyeonacbewfdfddvnjkiloujtghfgbrgrgttghbtdfgbnfg'));
+console.timeEnd(reverse('heojiyeonacbewfdfddvnjkiloujtghfgbrgrgttghbtdfgbnfg'));
+// console.log(reverse('rithmschool')); // 'loohcsmhtir'
