@@ -113,6 +113,21 @@ class SinglyLinkedList {
         this.length--;
         return target;
     }
+    reverse() {
+        let node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+        let prev = null;
+        let next;
+
+        for (let i = 0; i < this.length; i++) {
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+        return this;
+    }
 }
 
 
@@ -122,3 +137,6 @@ lists.push(23);
 lists.push(5);
 lists.push(96);
 console.log(lists); //10-23-5-96
+lists.reverse();
+console.log(lists); //96-5-23-10
+// lists.print();
